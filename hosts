@@ -1,0 +1,4 @@
+[projects]
+192.168.201.10 ansible_ssh_user=root ansible_password=toortoor
+192.168.201.20 ansible_ssh_user=root ansible_password=toortoor
+192.168.201.30 ansible_ssh_user=root ansible_password=toortoor

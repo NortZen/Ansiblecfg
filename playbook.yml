@@ -1,0 +1,26 @@
+---
+  name: rul
+  hosts: projects
+  become_method: sudo
+  become_user: root
+ 
+  tasks:
+
+  name: update 
+   apt: 
+   - name: "*" 
+   - state: latest
+
+  name: enable ufw 
+    community.general.ufw:
+    - state: enabled 
+    - policy: allow
+
+  name: open ports 80 1834 8080
+     community.general.ufw:
+     - rule: allow
+     - port: '80''1834''8080'
+     - proto: tcp  
+
+
+  
